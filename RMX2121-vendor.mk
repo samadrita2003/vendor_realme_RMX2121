@@ -22,9 +22,15 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/etc/init/kpoc_charger.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/kpoc_charger.rc \
     vendor/realme/RMX2121/proprietary/lib/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libem_support_jni.so \
     vendor/realme/RMX2121/proprietary/lib/libshowlogo.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libshowlogo.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnfc_st_dta.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnfc_st_dta_jni.so \
     vendor/realme/RMX2121/proprietary/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptXHD_encoder.so \
     vendor/realme/RMX2121/proprietary/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptX_encoder.so \
     vendor/realme/RMX2121/proprietary/lib64/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libem_support_jni.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnfc_st_dta.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnfc_st_dta_jni.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libsn100nfc_nci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsn100nfc_nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libst54nfc_nci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libst54nfc_nci.so \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/bt_drv.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/bt_drv.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/conninfra.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/conninfra.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/fmradio_drv.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/fmradio_drv.ko \
