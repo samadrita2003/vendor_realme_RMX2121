@@ -30,8 +30,19 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/conninfra.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/conninfra.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.0.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.1.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.2.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta_jni.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/libstnfc-nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libstnfc-nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnfc_st_dta.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnfc_st_dta_jni.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libnq330nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnq330nfc_nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libsn100nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsn100nfc_nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libst54nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libst54nfc_nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/libstnfc-nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libstnfc-nci.so \
 
 PRODUCT_PACKAGES += \
     EngineerMode \
     ImsService
-
