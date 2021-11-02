@@ -19,6 +19,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/bin/kpoc_charger:$(TARGET_COPY_OUT_SYSTEM)/bin/kpoc_charger \
+    vendor/realme/RMX2121/proprietary/bin/vtservice:$(TARGET_COPY_OUT_SYSTEM)/bin/vtservice \
+    vendor/realme/RMX2121/proprietary/bin/wait_for_keymaster:$(TARGET_COPY_OUT_SYSTEM)/bin/wait_for_keymaster \
+    vendor/realme/RMX2121/proprietary/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.vtservice.rc \
+    vendor/realme/RMX2121/proprietary/etc/init/wait_for_keymaster.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wait_for_keymaster.rc \
     vendor/realme/RMX2121/proprietary/product/etc/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
     vendor/realme/RMX2121/proprietary/etc/init/kpoc_charger.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/kpoc_charger.rc \
     vendor/realme/RMX2121/proprietary/lib/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libem_support_jni.so \
