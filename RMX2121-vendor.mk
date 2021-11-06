@@ -34,9 +34,22 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/conninfra.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/conninfra.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko \
+    vendor/realme/RMX2121/proprietary/system/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.0.so \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.1.so \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.2.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libvibrator.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvibrator.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator-V1-cpp.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator-V1-cpp.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator@1.1.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator@1.2.so \
+    vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator@1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator@1.3.so \
+    vendor/realme/RMX2121/proprietary/system/lib/vendor.oplus.hardware.lmvibrator@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.oplus.hardware.lmvibrator@1.0.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libvibrator.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvibrator.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator-V1-cpp.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator-V1-cpp.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.1.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.2.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.3.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/vendor.oplus.hardware.lmvibrator@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.oplus.hardware.lmvibrator@1.0.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta_jni.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libstnfc-nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libstnfc-nci.so \
