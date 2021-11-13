@@ -35,6 +35,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko \
     vendor/realme/RMX2121/proprietary/product/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko \
     vendor/realme/RMX2121/proprietary/system/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar \
+    vendor/realme/RMX2121/proprietary/system/framework/mediatek-ims-extension-plugin.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/mediatek-ims-extension-plugin.jar \
+    vendor/realme/RMX2121/proprietary/system/framework/mediatek-ims-legacy.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/mediatek-ims-legacy.jar \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.0.so \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.1.so \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.nfc@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.nfc@1.2.so \
@@ -44,22 +46,58 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator@1.2.so \
     vendor/realme/RMX2121/proprietary/system/lib/android.hardware.vibrator@1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.vibrator@1.3.so \
     vendor/realme/RMX2121/proprietary/system/lib/vendor.oplus.hardware.lmvibrator@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.oplus.hardware.lmvibrator@1.0.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libcomutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcomutils.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libimsma.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libimsma_adapt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_adapt.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libimsma_rtp.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_rtp.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libimsma_socketwrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_socketwrapper.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtk_vt_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtk_vt_service.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtk_vt_wrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtk_vt_wrapper.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtkaudio_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtkaudio_utils.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtkavenhancements.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtkavenhancements.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtklimiter.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtklimiter.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtkperf_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtkperf_client.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libmtkshifter.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtkshifter.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libsignal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsignal.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libsink.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsink.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libsource.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsource.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libvcodec_cap.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvcodec_cap.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libvcodec_capenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvcodec_capenc.so \
+    vendor/realme/RMX2121/proprietary/system/lib/libvt_avsync.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvt_avsync.so \
     vendor/realme/RMX2121/proprietary/system/lib64/libvibrator.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvibrator.so \
     vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator-V1-cpp.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator-V1-cpp.so \
     vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.1.so \
     vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.2.so \
     vendor/realme/RMX2121/proprietary/system/lib64/android.hardware.vibrator@1.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.vibrator@1.3.so \
     vendor/realme/RMX2121/proprietary/system/lib64/vendor.oplus.hardware.lmvibrator@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.oplus.hardware.lmvibrator@1.0.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtk_vt_wrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtk_vt_wrapper.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtkaudio_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkaudio_utils.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtkavenhancements.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkavenhancements.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtklimiter.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtklimiter.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtkperf_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkperf_client.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libmtkshifter.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkshifter.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libvcodec_cap.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_cap.so \
+    vendor/realme/RMX2121/proprietary/system/lib64/libvcodec_capenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_capenc.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnfc_st_dta_jni.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib/libstnfc-nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libstnfc-nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.videotelephony@1.0.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnfc_st_dta.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libnfc_st_dta_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnfc_st_dta_jni.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libnq330nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnq330nfc_nci.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libsn100nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsn100nfc_nci.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libst54nfc_nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libst54nfc_nci.so \
     vendor/realme/RMX2121/proprietary/system_ext/lib64/libstnfc-nci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libstnfc-nci.so \
+    vendor/realme/RMX2121/proprietary/system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.videotelephony@1.0.so \
 
 PRODUCT_PACKAGES += \
     EngineerMode \
-    ImsService
+    ImsService \
+    libem_support_jni \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
