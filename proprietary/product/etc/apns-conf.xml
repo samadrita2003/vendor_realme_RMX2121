@@ -4748,6 +4748,9 @@
   />
 <!-- Guangzhi.Deng@PSW.NW.DATA.1956446, 2019/04/16, VENDOR_EDIT modify for KENA operator end  -->
 <!-- Bangxu.Li@PSW.NW.DATA.1720901, add for Dual IMSI requirement from Fastweb, begin -->
+<!-- #ifdef OPLUS_BUG_DEBUG -->
+<!-- liyuncong@NETWORK.DATA.312210, 2021/10/08, merge apn for fastweb -->
+<!--
   <apn carrier="FW WEB"
       mcc="222"
       mnc="08"
@@ -4758,6 +4761,7 @@
       mvno_type="gid"
       mvno_match_data="D8FFFFFFFFFFFFFF"
   />
+-->
   <apn carrier="FW MMS"
       mcc="222"
       mnc="08"
@@ -4765,12 +4769,13 @@
       mmsc="http://mms.fastweb.it/mms/wapenc"
       mmsproxy="85.18.189.217"
       mmsport="8080"
-      type="mms"
-      protocol="IP"
-      roaming_protocol="IP"
+      type="mms,default,supl"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
       mvno_type="gid"
       mvno_match_data="D8FFFFFFFFFFFFFF"
   />
+<!-- #endif OPLUS_BUG_DEBUG -->
     <apn carrier="FW WEB"
       mcc="228"
       mnc="01"
@@ -5351,7 +5356,7 @@
       apn="internet.it"
       type="default,supl"
       mvno_type="gid"
-      mvno_match_data="FFFFFFFFFFFFFFFFFF"
+      mvno_match_data="FFFFFFFFFF"
   />
   <apn carrier="MMS"
       mcc="222"
@@ -5362,7 +5367,7 @@
       mmsport="8080"
       type="mms"
       mvno_type="gid"
-      mvno_match_data="FFFFFFFFFFFFFFFFFF"
+      mvno_match_data="FFFFFFFFFF"
   />
   <apn carrier="INTERNET"
       mcc="222"
@@ -5510,7 +5515,7 @@
       apn="internet.it"
       type="default,supl"
       mvno_type="gid"
-      mvno_match_data="FFFFFFFFFFFFFFFFFF"
+      mvno_match_data="FFFFFFFFFF"
   />
   <apn carrier="MMS"
       mcc="222"
@@ -5521,7 +5526,7 @@
       mmsport="8080"
       type="mms"
       mvno_type="gid"
-      mvno_match_data="FFFFFFFFFFFFFFFFFF"
+      mvno_match_data="FFFFFFFFFF"
   />
   <apn carrier="INTERNET"
       mcc="222"
@@ -10829,27 +10834,30 @@
       mmsport="8080"
       type="mms"
   />
-  <apn carrier="Internet Vivacom"
+  <!--#ifdef ODM_HQ_EDIT-->
+  <!--wangyong@ODM_HQ.NW.APN,291388,2021/07/23,update Vivacom apn-->
+  <apn carrier="VIVACOM Internet"
       mcc="284"
       mnc="03"
-      apn="internet.vivacom.bg"
-      user="VIVACOM"
-      password="VIVACOM"
-      authtype="1"
+      apn="Internet.vivacom.bg"
+      user="vivacom"
+      password="vivacom"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
       type="default,supl"
   />
-  <apn carrier="Vivacom MMS"
+  <apn carrier="VIVACOM MMS"
       mcc="284"
       mnc="03"
       apn="mms.vivacom.bg"
       user="mms"
       password="mms"
-      authtype="1"
       mmsc="http://mmsc.vivacom.bg"
       mmsproxy="192.168.123.123"
       mmsport="8080"
       type="mms"
   />
+  <!--#endif ODM_HQ_EDIT-->
 <!-- #ifdef ODM_HQ_EDIT -->
 <!-- muxudong@ODM_HQ.NW.IMS.no id, 2020/04/29, add Bulgaria Vivacom ims config-->
   <apn carrier="IMS"
@@ -10902,13 +10910,16 @@
       type="default,supl"
   />
  <!-- Yanzhou.Chen@RM.NW.DATA.2664009, 2020/1/3, follow Samsung APN for 7 Europe marktet. end -->
-
+<!-- #ifdef ODM_WT_EDIT -->
+<!-- Zhangqi@ODM_WT.NW , 1985839, 2021/08/14 ,change APN protocol type from IPv4 to IPv4v6 -->
   <apn carrier="Turkcell Internet"
       mcc="286"
       mnc="01"
       apn="internet"
       type="default,supl"
+      protocol="IPV4V6"
   />
+<!-- #endif ODM_WT_EDIT -->
 
   <apn carrier="Turkcell MMS"
       mcc="286"
@@ -10932,6 +10943,8 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
+<!-- #ifdef ODM_WT_EDIT -->
+<!-- Zhangqi@ODM_WT.NW , 1985839, 2021/08/14 ,change APN protocol type from IPv4 to IPv4v6 -->
   <apn carrier="Vodafone Internet"
       mcc="286"
       mnc="02"
@@ -10939,7 +10952,9 @@
       user="vodafone"
       password="vodafone"
       type="default,supl,xcap"
+      protocol="IPV4V6"
   />
+<!-- #endif ODM_WT_EDIT -->
 
   <apn carrier="Vodafone MMS"
       mcc="286"
@@ -10963,12 +10978,16 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
+<!-- #ifdef ODM_WT_EDIT -->
+<!-- Zhangqi@ODM_WT.NW , 1985839, 2021/08/14 ,change APN protocol type from IPv4 to IPv4v6 -->
   <apn carrier="Avea Internet"
       mcc="286"
       mnc="03"
       apn="internet"
       type="default,supl"
+      protocol="IPV4V6"
   />
+<!-- #endif ODM_WT_EDIT -->
 
   <!--Junfeng.Gao@NETWORK.IMS.268363, 2021/05/19, modify mmsc address begin -->
   <apn carrier="Avea MMS"
@@ -11028,21 +11047,17 @@
   />-->
 <!-- #endif ODM_WT_EDIT -->
 
-  <apn carrier="Internet"
+  <apn carrier="internet"
       mcc="293"
       mnc="40"
-      apn="internet.simobil.si"
-      user="simobil"
-      password="internet"
+      apn="internet"
       type="default,supl"
   />
   <apn carrier="mms"
       mcc="293"
       mnc="40"
-      apn="mms.simobil.si"
-      user="simobil"
-      password="internet"
-      mmsc="http://mmc/"
+      apn="mms"
+      mmsc="http://mmc"
       mmsproxy="80.95.224.46"
       mmsport="9201"
       type="mms"
@@ -11238,28 +11253,25 @@
       type="wap"
   />
 
-  <apn carrier="Telenor MNE internet"
+  <!--#ifdef ODM_HQ_EDIT-->
+  <!--wangyong@ODM_HQ.NW.APN,262076,2021/07/06,update Telenor apn-->
+  <apn carrier="Telenor MNE"
       mcc="297"
       mnc="01"
       apn="internet"
-      user="gprs"
-      password="gprs"
-      proxy="192.168.246.5"
-      port="8080"
       type="default,supl"
   />
 
-  <apn carrier="Telenor MNE MMS"
+  <apn carrier="Telenor MNE"
       mcc="297"
       mnc="01"
       apn="mms"
-      user="mms"
-      password="mms"
       mmsc="http://mm.vor.telenor.me"
       mmsproxy="192.168.246.5"
       mmsport="8080"
       type="mms"
   />
+  <!--#endif ODM_HQ_EDIT-->
 
   <apn carrier="Telekom Internet"
       mcc="297"
@@ -16116,8 +16128,8 @@
       apn="aircelwebpost"
       type="default,supl"
   />
-
-  <apn carrier="Cellone_North MMS"
+<!-- XieMengDi@PSW.NW.DATA.1336336, 2021/04/06, modify for IN BSNL requirements, start -->
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="34"
       apn="bsnlmms"
@@ -16127,7 +16139,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="34"
       apn="bsnlnet"
@@ -16405,7 +16417,7 @@
       type="default,supl"
   />
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="38"
       apn="bsnlmms"
@@ -16415,7 +16427,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="38"
       apn="bsnlnet"
@@ -16656,7 +16668,7 @@
       type="default,supl"
   />
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="51"
       apn="bsnlmms"
@@ -16666,7 +16678,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="51"
       apn="bsnlnet"
@@ -16702,7 +16714,7 @@
       type="default,supl"
   />
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="53"
       apn="bsnlmms"
@@ -16712,7 +16724,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="53"
       apn="bsnlnet"
@@ -16731,7 +16743,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="54"
       apn="bsnlmms"
@@ -16741,7 +16753,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="54"
       apn="bsnlnet"
@@ -16760,7 +16772,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="55"
       apn="bsnlmms"
@@ -16770,7 +16782,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="55"
       apn="bsnlnet"
@@ -16817,7 +16829,7 @@
       user_visible="false"
       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="57"
       apn="bsnlmms"
@@ -16827,7 +16839,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="57"
       apn="bsnlnet"
@@ -16846,7 +16858,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="58"
       apn="bsnlmms"
@@ -16856,7 +16868,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="58"
       apn="bsnlnet"
@@ -16875,7 +16887,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="59"
       apn="bsnlmms"
@@ -16885,7 +16897,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="59"
       apn="bsnlnet"
@@ -16935,7 +16947,7 @@
       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="62"
       apn="bsnlmms"
@@ -16945,7 +16957,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="62"
       apn="bsnlnet"
@@ -16964,7 +16976,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="64"
       apn="bsnlmms"
@@ -16975,7 +16987,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="64"
       apn="bsnlnet"
@@ -16994,7 +17006,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="Cellone_North MMS"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="66"
       apn="bsnlmms"
@@ -17004,7 +17016,7 @@
       type="mms"
   />
 
-  <apn carrier="Cellone_North"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="66"
       apn="bsnlnet"
@@ -17103,7 +17115,7 @@
       roaming_protocol="IPV4V6"
   />
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="71"
       apn="bsnlmms"
@@ -17114,7 +17126,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="71"
       apn="bsnlnet"
@@ -17133,7 +17145,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="72"
       apn="bsnlmms"
@@ -17144,7 +17156,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="72"
       apn="bsnlnet"
@@ -17163,7 +17175,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="73"
       apn="bsnlmms"
@@ -17174,7 +17186,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="73"
       apn="bsnlnet"
@@ -17193,7 +17205,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="74"
       apn="bsnlmms"
@@ -17203,7 +17215,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="74"
       apn="bsnlnet"
@@ -17222,7 +17234,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="75"
       apn="bsnlmms"
@@ -17232,7 +17244,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="75"
       apn="bsnlnet"
@@ -17251,7 +17263,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="76"
       apn="bsnlmms"
@@ -17261,7 +17273,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="76"
       apn="bsnlnet"
@@ -17280,7 +17292,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="77"
       apn="bsnlmms"
@@ -17290,7 +17302,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="77"
       apn="bsnlnet"
@@ -17328,7 +17340,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="79"
       apn="bsnlmms"
@@ -17339,7 +17351,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="79"
       apn="bsnlnet"
@@ -17358,7 +17370,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="80"
       apn="bsnlmms"
@@ -17369,7 +17381,7 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="80"
       apn="bsnlnet"
@@ -17388,7 +17400,7 @@
   />
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn end-->
 
-  <apn carrier="bsnlmms"
+  <apn carrier="BSNL MMS"
       mcc="404"
       mnc="81"
       apn="bsnlmms"
@@ -17398,13 +17410,13 @@
       type="mms"
   />
 
-  <apn carrier="bsnlnet"
+  <apn carrier="BSNL NET"
       mcc="404"
       mnc="81"
       apn="bsnlnet"
       type="default,supl"
   />
-
+<!-- XieMengDi@PSW.NW.DATA.1336336, 2021/04/06, modify for IN BSNL requirements, end -->
   <!-- Junfeng.Gao@NETWORK.IMS.2710108, 2020/04/07, add India BSNL ims apn start-->
   <apn carrier="IMS"
        mcc="404"
@@ -19783,10 +19795,12 @@
       type="mms"
   />
 
-  <apn carrier="Internet"
+<!-- Amit.Kawadkar@NETWORK.DATA.1816845, 2021/07/20, -->
+<!-- Wrong APN/DNN Configured in Device Software/MBN for JIO begin -->
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="840"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20141,10 +20155,10 @@
       user_visible="false"
       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="854"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20160,10 +20174,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="855"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20179,10 +20193,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="856"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20198,10 +20212,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="857"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20217,10 +20231,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="858"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20236,10 +20250,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="859"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20255,10 +20269,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="860"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20274,10 +20288,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="861"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20293,10 +20307,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="862"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20312,10 +20326,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="863"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20331,10 +20345,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="864"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20350,10 +20364,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="865"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20369,10 +20383,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="866"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20388,10 +20402,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="867"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20407,10 +20421,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="868"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20426,10 +20440,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="869"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20445,10 +20459,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="870"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20464,10 +20478,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="871"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20483,10 +20497,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="872"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20502,10 +20516,10 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="873"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
@@ -20521,14 +20535,16 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
-  <apn carrier="Internet"
+  <apn carrier="Jio 4G"
       mcc="405"
       mnc="874"
-      apn="Jionet"
+      apn="jionet"
       type="default,supl,xcap"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
   />
+<!-- Amit.Kawadkar@NETWORK.DATA.1816845, 2021/07/20, -->
+<!-- Wrong APN/DNN Configured in Device Software/MBN for JIO end -->
 
   <apn carrier="IMS"
       mcc="405"
@@ -20946,27 +20962,25 @@
   />
 <!--#endif /* VENDOR_EDIT */-->
 
-<!-- Bopeng.Shan@NETWORK.APN,2800604,2020/08/13,LK apn  -->
-  <apn carrier="Mobitel"
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Mobitel, start -->
+  <apn carrier="SLTMobitel"
       mcc="413"
       mnc="01"
-        apn="Mobitel"
-        protocol="IPV4V6"
+      apn="mobitel"
+      protocol="IPV4V6"
       type="default,supl"
   />
 
     <!-- Bopeng.Shan@NETWORK.APN,2811517,2020/09/18,modify apn param  -->
- <apn carrier="Mobitel-MMS"
+ <apn carrier="SLTMobitel"
       mcc="413"
       mnc="01"
-      apn="wapmms"
-      mmsc="http://192.168.50.165"
-      mmsproxy="192.168.50.163"
-      mmsport="8080"
-        protocol="IPV4V6"
+      apn="mobitel"
+      mmsc="http://mmsc.mobitel.lk:8080"
+      protocol="IPV4V6"
       type="mms"
   />
-
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Mobitel, end-->
     <!-- chenguoyao@PSW.NW.IMS.2071716, 2019/6/18, add for Sri-Lanka MOBITEL requirement begin  -->
     <apn carrier="IMS"
         mcc="413"
@@ -20987,25 +21001,26 @@
     />
     <!-- chenguoyao@PSW.NW.IMS.2071716, 2019/6/18, add for Sri-Lanka MOBITEL requirement end  -->
 
+
+    <!-- #endif ODM_WT_EDIT -->
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Dialog, start -->
     <apn carrier="Dialog"
         mcc="413"
         mnc="02"
-        apn="Dialogbb"
-        server=""
+        apn="dialogbb"
         protocol="IPV4V6"
         type="default,supl"
     />
 
-    <apn carrier="MMS"
+    <apn carrier="Dialog"
         mcc="413"
         mnc="02"
-        apn="Dialogbb"
-        mmsport="8080"
+        apn="dialogbb"
         mmsc="http://mms.dialog.lk:3130/mmsc"
         protocol="IPV4V6"
         type="mms"
     />
-
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Dialog, end -->
     <!-- chenguoyao@PSW.NW.IMS.2071716, 2019/6/18, add for Sri-Lanka DIALOG requirement begin  -->
     <apn carrier="IMS"
         mcc="413"
@@ -21018,40 +21033,33 @@
     />
     <!-- chenguoyao@PSW.NW.IMS.2071716, 2019/6/18, add for Sri-Lanka DIALOG requirement end  -->
 
-    <apn carrier="Etisalat WEB"
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Etisalat, start -->
+    <apn carrier="Hutch"
         mcc="413"
         mnc="03"
-        apn="web"
-        server=""
+        apn="internet"
+        protocol="IPV4V6"
         type="default,supl"
     />
-
-    <apn carrier="Etisalat MMS"
-        mcc="413"
-        mnc="03"
-        apn="mms"
-        mmsproxy="192.168.104.004"
-        mmsport="9401"
-        mmsc="http://mms.etisalat.lk:8085"
-        type="mms"
-    />
-
-    <apn carrier="Bell4G"
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Etisalat, end -->
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Bell4G, start -->
+    <apn carrier="Lanka Bell 4G"
         apn="bell4gp"
         mcc="413"
         mnc="04"
         type="default,supl"
     />
+  <!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Bell4G, end -->
 <!--Mohit.Rewtani@PSW.NW.DATA.665973,2020/11/20,modify airtel apn name,mms apn mmsproxy and mmsc. begin-->
-    <apn carrier="Airtel Internet"
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn airtellive, start -->
+    <apn carrier="Airtel"
         mcc="413"
         mnc="05"
         apn="airtellive"
-        server=""
         type="default,supl"
     />
 
-    <apn carrier="Airtel MMS"
+    <apn carrier="Airtel"
         mcc="413"
         mnc="05"
         apn="airtellive"
@@ -21060,26 +21068,17 @@
         mmsc="http://mmscvip/"
         type="mms"
     />
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn airtellive, end -->
 <!--Mohit.Rewtani@PSW.NW.DATA.665973,2020/11/20,modify airtel apn name,mms apn mmsproxy and mmsc. end-->
-    <apn carrier="Hutch"
-        mcc="413"
-        mnc="03"
-        apn="Hutch 3G"
-        server=""
-        authtype="1"
-        protocol="IPV4V6"
-        type="default,supl"
-    />
-
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Hutch, start -->
     <apn carrier="Hutch"
         mcc="413"
         mnc="08"
-        apn="Hutch 3G"
-        server=""
-        authtype="1"
+        apn="internet"
         protocol="IPV4V6"
         type="default,supl"
     />
+<!-- xuwu.yuan@NETWORK.DATA. 2021/8/3, modify Update the apn Hutch, end -->
 <!-- Bopeng.Shan@NETWORK.APN,2800604,2020/08/13,LK apn end.  -->
 
     <apn carrier="MPT"
@@ -22327,7 +22326,7 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 <!-- chenguoyao@PSW.NW.IMS.NA, 2019/11/04,  add for IMS requirement end  -->
-
+<!-- dingyu@NW.IMS.293026, 2021/08/06,  add xcap apn  -->
   <apn carrier="NTC"
       mcc="429"
       mnc="01"
@@ -22340,7 +22339,7 @@
       mmsproxy=""
       mmsport=""
       mmsc=""
-      type="default,supl"
+      type="default,supl,xcap"
       authtype="0"
   />
 
@@ -22358,6 +22357,16 @@
       mmsc="http://192.80.11.180"
       type="mms"
       authtype="0"
+  />
+
+  <apn carrier="IMS"
+       mcc="429"
+       mnc="01"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
 
   <apn carrier="Ncell"
@@ -26030,6 +26039,21 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mvno_match_data="53005204xxxxxxx"
   />
 
+<!-- #ifdef ODM_WT_EIDT -->
+<!-- chenyue@ODM_WT.NW.CALL, 1733828, 2021/07/23, add for Emergency APN -->
+<!-- #ifdef ODM_WT_EDIT -->
+<!-- Zhangqi@ODM_WT.NW , 1983046, 2021/08/14 ,add user_visible=false -->
+  <apn carrier="Emergency"
+      mcc="530"
+      mnc="05"
+      apn=""
+      type="emergency"
+      protocol="IPV6"
+      roaming_protocol="IPV6"
+      user_visible="false"
+  />
+<!-- #endif ODM_WT_EDIT -->
+<!-- #endif ODM_WT_EDIT -->
   <apn carrier="MMS"
       mcc="530"
       mnc="05"
@@ -26111,6 +26135,50 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       apn="hos"
       type="xcap"
   />
+
+<!-- #ifdef ODM_WT_EIDT -->
+<!-- chenyue@ODM_WT.NW.CALL, 1733828, 2021/07/23, add for Emergency APN -->
+<!-- #ifdef ODM_WT_EDIT -->
+<!-- Zhangqi@ODM_WT.NW , 1983046, 2021/08/14 ,add user_visible=false -->
+  <apn carrier="Emergency"
+      mcc="530"
+      mnc="99"
+      apn=""
+      type="emergency"
+      protocol="IPV6"
+      roaming_protocol="IPV6"
+      user_visible="false"
+  />
+<!-- #endif ODM_WT_EDIT -->
+<!-- #endif ODM_WT_EDIT -->
+  <!--#ifdef ODM_HQ_EDIT-->
+  <!--Zhimin.Deng@ODM_HQ.NW.APN.252156,2021/06/16,add for VITI.Polynesia-->
+  <apn carrier="Internet"
+      mcc="547"
+      mnc="05"
+      apn="internet"
+      type="default"
+      read_only="true"
+  />
+
+  <apn carrier="IMS"
+      mcc="547"
+      mnc="05"
+      apn="ims"
+      type="ims,xcap"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+      read_only="true"
+  />
+
+  <apn carrier="SOS"
+      mcc="547"
+      mnc="05"
+      apn="sos"
+      type="emergency"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+      read_only="true"
+  />
+  <!--#endif ODM_HQ_EDIT-->
 
   <!-- yingjun.tian@PSW.NW.DATA.2670476, 2019/12/10, modify the apn field of orange and vodafone , start -->
   <apn carrier="Orange MMS"
@@ -27308,6 +27376,8 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
        mcc="708"
        mnc="02"
        apn="wap.tigo.hn"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
        proxy="10.16.17.20"
        port="8888"
        type="default,supl"
@@ -27317,6 +27387,8 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
        mcc="708"
        mnc="02"
        apn="mms.tigo.hn"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
        mmsc="http://mms"
        mmsproxy="10.16.17.12"
        mmsport="8888"
@@ -28890,6 +28962,16 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mmsproxy="216.250.208.94"
       mmsport="8799"
       type="mms"
+  />
+
+   <apn carrier="IMS"
+      mcc="740"
+      mnc="01"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
 
   <apn carrier="MOVISTAR Wap"
